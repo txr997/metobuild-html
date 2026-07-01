@@ -1,0 +1,149 @@
+$flaticon_metobuild-font: "flaticon_metobuild";
+
+@font-face {
+    font-family: $flaticon_metobuild-font;
+    src: url("./flaticon_metobuild.woff2?a7e7e168f87e2b410da5f6287e1a0054") format("woff2"),
+url("./flaticon_metobuild.woff?a7e7e168f87e2b410da5f6287e1a0054") format("woff"),
+url("./flaticon_metobuild.eot?a7e7e168f87e2b410da5f6287e1a0054#iefix") format("embedded-opentype"),
+url("./flaticon_metobuild.ttf?a7e7e168f87e2b410da5f6287e1a0054") format("truetype"),
+url("./flaticon_metobuild.svg?a7e7e168f87e2b410da5f6287e1a0054#flaticon_metobuild") format("svg");
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: flaticon_metobuild !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+$flaticon_metobuild-map: (
+    "customer-service": "\f101",
+    "phone": "\f102",
+    "right": "\f103",
+    "back": "\f104",
+    "up-right-arrow": "\f105",
+    "up-right-arrow-1": "\f106",
+    "goal": "\f107",
+    "eyetap": "\f108",
+    "labour": "\f109",
+    "safety": "\f10a",
+    "quality-control": "\f10b",
+    "relationship": "\f10c",
+    "construction": "\f10d",
+    "shuttle": "\f10e",
+    "property": "\f10f",
+    "enhancement": "\f110",
+    "safety-shield": "\f111",
+    "energy": "\f112",
+    "factory": "\f113",
+    "medical-center": "\f114",
+    "hospital": "\f115",
+    "open-book": "\f116",
+    "mountains": "\f117",
+    "construction-site": "\f118",
+    "bank": "\f119",
+    "house": "\f11a",
+    "text": "\f11b",
+    "star": "\f11c",
+    "right-arrow": "\f11d",
+    "home": "\f11e",
+    "copyright": "\f11f",
+);
+
+.flaticon-customer-service:before {
+    content: map-get($flaticon_metobuild-map, "customer-service");
+}
+.flaticon-phone:before {
+    content: map-get($flaticon_metobuild-map, "phone");
+}
+.flaticon-right:before {
+    content: map-get($flaticon_metobuild-map, "right");
+}
+.flaticon-back:before {
+    content: map-get($flaticon_metobuild-map, "back");
+}
+.flaticon-up-right-arrow:before {
+    content: map-get($flaticon_metobuild-map, "up-right-arrow");
+}
+.flaticon-up-right-arrow-1:before {
+    content: map-get($flaticon_metobuild-map, "up-right-arrow-1");
+}
+.flaticon-goal:before {
+    content: map-get($flaticon_metobuild-map, "goal");
+}
+.flaticon-eyetap:before {
+    content: map-get($flaticon_metobuild-map, "eyetap");
+}
+.flaticon-labour:before {
+    content: map-get($flaticon_metobuild-map, "labour");
+}
+.flaticon-safety:before {
+    content: map-get($flaticon_metobuild-map, "safety");
+}
+.flaticon-quality-control:before {
+    content: map-get($flaticon_metobuild-map, "quality-control");
+}
+.flaticon-relationship:before {
+    content: map-get($flaticon_metobuild-map, "relationship");
+}
+.flaticon-construction:before {
+    content: map-get($flaticon_metobuild-map, "construction");
+}
+.flaticon-shuttle:before {
+    content: map-get($flaticon_metobuild-map, "shuttle");
+}
+.flaticon-property:before {
+    content: map-get($flaticon_metobuild-map, "property");
+}
+.flaticon-enhancement:before {
+    content: map-get($flaticon_metobuild-map, "enhancement");
+}
+.flaticon-safety-shield:before {
+    content: map-get($flaticon_metobuild-map, "safety-shield");
+}
+.flaticon-energy:before {
+    content: map-get($flaticon_metobuild-map, "energy");
+}
+.flaticon-factory:before {
+    content: map-get($flaticon_metobuild-map, "factory");
+}
+.flaticon-medical-center:before {
+    content: map-get($flaticon_metobuild-map, "medical-center");
+}
+.flaticon-hospital:before {
+    content: map-get($flaticon_metobuild-map, "hospital");
+}
+.flaticon-open-book:before {
+    content: map-get($flaticon_metobuild-map, "open-book");
+}
+.flaticon-mountains:before {
+    content: map-get($flaticon_metobuild-map, "mountains");
+}
+.flaticon-construction-site:before {
+    content: map-get($flaticon_metobuild-map, "construction-site");
+}
+.flaticon-bank:before {
+    content: map-get($flaticon_metobuild-map, "bank");
+}
+.flaticon-house:before {
+    content: map-get($flaticon_metobuild-map, "house");
+}
+.flaticon-text:before {
+    content: map-get($flaticon_metobuild-map, "text");
+}
+.flaticon-star:before {
+    content: map-get($flaticon_metobuild-map, "star");
+}
+.flaticon-right-arrow:before {
+    content: map-get($flaticon_metobuild-map, "right-arrow");
+}
+.flaticon-home:before {
+    content: map-get($flaticon_metobuild-map, "home");
+}
+.flaticon-copyright:before {
+    content: map-get($flaticon_metobuild-map, "copyright");
+}

@@ -1,0 +1,142 @@
+/* 
+    features-1-start
+*/
+.mb-features-1 {
+    &-wrap {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    &-card {
+        flex: 1 1 300px;
+        max-width: 480px;
+        position: relative;
+        z-index: 1;
+        padding: 68px 75px;
+
+        @media #{$xxl,$xl,$lg,$md,$xs} {
+            padding: 68px 30px;
+        }
+
+        
+
+        &:not(:last-child) {
+            border-right: 1px solid rgb(0 0 0 / 20%);
+        }
+
+
+
+        .icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 80px;
+            height: 80px;
+            background-color: var(--mb-clr-pr-1);
+            border-radius: 10px;
+            font-size: 40px;
+            color: #fff;
+            margin-bottom: 75px;
+            transition: var(--mb-cube-1);
+        }
+
+        .title {
+            font-size: 30px;
+            margin-bottom: 24px;
+            transition: var(--mb-cube-1);
+
+            @media #{$xxl,$xl,$lg,$md,$xs} {
+                font-size: 24px;
+            }
+        }
+        
+        .disc {
+            max-width: 295px;
+            transition: var(--mb-cube-1);
+        }
+
+        .bg-img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -2;
+            opacity: 0%;
+            transition: var(--mb-cube-1);
+        }
+
+        .hover-content {
+            position: absolute;
+            inset: 0;
+            padding: 68px 75px;
+            z-index: 1;
+            width: 100%;
+            height: 100%;
+
+            @media #{$xxl,$xl,$lg,$md,$xs} {
+                padding: 68px 30px;
+            }
+            
+
+            .title, .disc, .icon {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+        }
+
+        .ins-content {
+
+        }
+
+        &:hover {
+            .bg-img {
+                opacity: 20%;
+            }
+
+            .hover-content {                
+                .title, .disc, .icon {
+                    transform: translateY(0px);
+                    opacity: 1;
+                }
+                
+                .icon {
+                    margin-bottom: 0;
+                }
+
+                .disc {
+                    margin-bottom: 75px;
+                }
+            }
+
+            .ins-content {
+                .title, .disc, .icon {
+                    transform: translateY(-20px);
+                    opacity: 0;
+                }
+            }
+        }
+    }
+
+
+    &-marquee {
+        border-top: 1px solid rgb(0 0 0 / 20%);
+        &-wrap {
+            display: flex;
+            margin-top: -5px;
+    
+            .single-line {
+                flex: 0 0 auto;
+            }
+        }
+    }
+    
+}
+
+
+
+
+
+/* 
+    features-1-end
+*/
