@@ -1,0 +1,231 @@
+/* 
+    projects-1-start
+*/
+.mb-projects-1 {
+    &-area {
+        background-color: #000;
+    }
+    &-sec-title {
+        .mb-subtitle-1 {
+            color: #fff;
+        }
+        .mb-sec-title-1 {
+            color: #fff;
+        }
+    }
+
+    &-item {
+        position: relative;
+        z-index: 1;
+        padding-top: 148px;
+        padding-bottom: 210px;
+
+        &::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 453px;
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 62.59%);
+            opacity: 0.68;
+            bottom: 0;
+            left: 0;
+            z-index: -1;
+        }
+
+        &-wrap {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 50px;
+            justify-content: space-between;
+        }
+        
+        .title-elm {
+            font-size: 60px;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            align-items: self-start;
+
+            @media #{$lg} {
+                font-size: 50px;
+            }
+
+            @media #{$md} {
+                font-size: 45px;
+            }
+
+            @media #{$xs} {
+                font-size: 30px;
+            }
+
+            @media #{$sm} {
+                font-size: 40px;
+            }
+
+            span {
+                display: inline-block;
+                background-color: #fff;
+                padding: 10px 15px;
+                padding-bottom: 0;
+                
+
+                &:first-child {
+                    border-radius: 8px 8px 0 0;
+                }
+
+                &:last-child {
+                    border-radius: 0px 0px 8px 8px ;
+                }
+            }
+        }
+        
+        .table-box {
+            width: 100%;
+            max-width: 380px;
+            background: rgba(0, 0, 0, 0.36);
+            border: 2px solid rgba(255, 255, 255, 0.32);
+            backdrop-filter: blur(37px);
+            border-radius: 20px;
+            padding: 32px 32px;
+        }
+        
+        .features-list {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 24px;
+
+            &-elm {
+                background: rgba(255, 255, 255, 0.12);
+                border: 1px solid var(--mb-clr-sd-1);
+                backdrop-filter: blur(16px);
+                border-radius: 100px;
+                color: #fff;
+                font-size: 14px;
+                padding: 5px 15px;
+            }
+        }
+        
+        .disc-elm {
+            color: #fff;
+            margin-bottom: 28px;
+            line-height: 28px;
+        }
+        
+        
+        .list-item {
+            display: flex;
+            flex-direction: column;
+            gap: 11px;
+            margin-bottom: 30px;
+
+            li {
+                color: #fff;
+                font-weight: 500;
+
+                span {
+                    font-weight: 400;
+                    opacity: 70%;
+                    margin-left: 12px;
+                }
+            }
+        }
+
+        .mb-pr-btn-1 {
+            padding: 16px 15px;
+            width: 100%;
+            justify-content: center;
+            color: #000;
+        }
+    }
+
+
+    &-slider {
+        .swiper-wrapper {
+            .swiper-slide {
+                .mb-projects-1-item {
+                    .title-elm {
+                        span {
+                            transform: translateY(20px);
+                            transition: var(--mb-cube-1);
+                            opacity: 0;
+                        }
+                    }
+                    .table-box {
+                        transform: translateY(20px);
+                        transition: var(--mb-cube-1);
+                        opacity: 0;
+                    }
+                }
+
+                &:is(.swiper-slide-active) {
+                    .mb-projects-1-item {
+                        .title-elm {
+                            span {
+                                transform: translateY(0px);
+                                opacity: 1;
+                                transition-delay: .2s;
+                                &:nth-child(2) {
+                                    transition-delay: .4s;
+                                }
+                                &:nth-child(3) {
+                                    transition-delay: .6s;
+                                }
+                            }
+                        }
+                        .table-box {
+                            transform: translateY(0px);
+                            opacity: 1;
+                            transition-delay: .2s;
+                        }
+                    }
+                }
+            }
+        }
+        &-pagi {
+            position: relative;
+            bottom: 92px;
+            left: 0;
+            width: 100%;
+            z-index: 1;
+    
+            .mb_project1_slider_pagination {
+                display: flex;
+                gap: 24px;
+                justify-content: center;
+    
+                span {
+                    margin: 0 !important;
+                    flex: 1;
+                    border-radius: 0;
+                    height: 3px;
+                    width: auto;
+                    opacity: 1;
+                    background-color: rgb(255 255 255 / 32%);
+                    position: relative;
+                    z-index: 1;
+    
+                    &::after {
+                        content: "";
+                        width: 0%;
+                        height: 100%;
+                        position: absolute;
+                        inset: 0;
+                        background-color: #fff;
+                        transition: .3s linear;
+                    }
+    
+                    &:is(.swiper-pagination-bullet-active) {
+                        &::after {
+                            width: 100%;
+                            transition: 6s linear;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+/* 
+    projects-1-end
+*/

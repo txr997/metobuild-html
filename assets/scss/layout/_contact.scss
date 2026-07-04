@@ -1,0 +1,133 @@
+/* 
+    contact-1-start
+*/
+.mb-contact-1 {
+    &-bg-img {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: calc(100% - 109px);
+        z-index: -3;
+    }
+
+    &-favicon {
+        position: absolute;
+        top: 30px;
+        left: -50px;
+        z-index: -2;
+    }
+
+    &-box {
+        max-width: 648px;
+        background-color: #fff;
+        width: 100%;
+        border-top: 6px solid var(--mb-clr-sd-1);
+        margin-left: auto;
+
+        .box-title {
+            font-size: 44px;
+            background-color: #000;
+            color: #fff;
+            padding: 0 40px;
+            padding-top: 35px;
+            padding-bottom: 25px;
+
+            @media #{$xs} {
+                font-size: 22px;
+                padding: 0 20px;
+                padding-top: 35px;
+                padding-bottom: 25px;
+            }
+        }
+
+        .box-disc {
+            margin-bottom: 16px;
+        }
+
+        .box-inner {
+            padding: 40px 40px;
+            @media #{$xs} {
+                padding: 40px 20px;
+            }
+        }
+    }
+
+    &-form {
+        display: grid;
+        gap: 6px 12px;
+        grid-template-columns: 1fr 1fr;
+
+        @media #{$xs} {
+            grid-template-columns: 1fr;
+        }
+
+        @media #{$sm} {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .form-label {
+            display: inline-block;
+            font-size: 18px;
+            font-weight: 400;
+            background: #fff;
+            padding: 0 4px;
+            margin-left: 16px;
+            position: relative;
+            transform: translateY(13px);
+        }
+
+        .form-input {
+            width: 100%;
+            height: 56px;
+            border-radius: 8px;
+            border: 1px solid rgb(0 0 0 / 12%);
+            font-size: 16px;
+            padding: 0 24px;
+            color: rgb(0 0 0 / 50%);
+            display: block;
+
+            &:is(textarea) {
+                height: 146px;
+                padding-top: 15px;
+                display: block;
+            }
+        }
+
+        .mb-pr-btn-1 {
+            width: 100%;
+            justify-content: center;
+            margin-top: 20px;
+            padding: 20px 15px;
+        }
+
+        .form-box {
+            &:is(.has-full-width) {
+                grid-column-start: 1;
+                grid-column-end: -1;
+            }
+        }
+    }
+
+    &-marquee {
+        margin-bottom: -42px;
+        mix-blend-mode: hard-light;
+
+        &-wrap {
+            .single-text {
+                font-size: 160px;
+                color: #fff;
+                opacity: 60%;
+                line-height: 1;
+            }
+        }
+    }
+}
+
+
+
+
+
+/* 
+    contact-1-end
+*/

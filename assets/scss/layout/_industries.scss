@@ -1,0 +1,96 @@
+/* 
+    industries-1-start
+*/
+.mb-industries-1 {
+    &-area {
+        &::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            background: linear-gradient(270deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
+        }
+    }
+    &-bg-img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -2;
+    }
+
+    &-sec-title {
+        text-align: right;
+        max-width: 660px;
+        margin-left: auto;
+
+
+        .mb-subtitle-1 {
+            color: #fff;
+        }
+
+        .mb-sec-title-1 {
+            font-size: 90px;
+            color: #fff;
+
+
+            @media #{$xxl} {
+                font-size: 85px;
+            }
+        
+            @media #{$xl} {
+                font-size: 70px;
+            }
+            
+            @media #{$lg} {
+                font-size: 64px;
+            }
+        
+            @media #{$md} {
+                font-size: 58px;
+            }
+        
+            @media #{$xs} {
+                font-size: 40px;
+            }
+        
+            @media #{$sm} {
+                font-size: 48px;
+            }
+        }
+    }
+
+    &-marquee {
+        &-wrap {
+            display: flex;
+            gap: 12px;
+            margin-right: 12px;
+
+            .single-item {
+                background-color: #fff;
+                display: flex;
+                align-items: center;
+                gap: 15px;
+                text-transform: uppercase;
+                flex: 0 0 auto;
+                border-radius: 6px;
+                color: #000;
+                font-weight: 500;
+                font-size: 20px;
+                padding: 25px 32px;
+
+                i {
+                    font-size: 30px;
+                }
+            }
+        }
+    }
+}
+
+
+/* 
+    industries-1-end
+*/
