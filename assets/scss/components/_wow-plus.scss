@@ -40,8 +40,8 @@
 .fadeInUp2 {
   -webkit-animation-name: fadeInUp2;
   animation-name: fadeInUp2;
-  animation-duration: 700ms;
-  animation-timing-function: var(--el-cube-1);
+  animation-duration: 500ms;
+  animation-timing-function: var(--mb-cube-1);
 }
 
 
@@ -59,8 +59,8 @@
 .fadeInLeft2 {
   -webkit-animation-name: fadeInLeft2;
   animation-name: fadeInLeft2;
-  animation-duration: 700ms;
-  animation-timing-function: var(--el-cube-1);
+  animation-duration: 500ms;
+  animation-timing-function: var(--mb-cube-1);
 }
 
 @keyframes fadeInRight2 {
@@ -77,8 +77,8 @@
 .fadeInRight2 {
   -webkit-animation-name: fadeInRight2;
   animation-name: fadeInRight2;
-  animation-duration: 700ms;
-  animation-timing-function: var(--el-cube-1);
+  animation-duration: 500ms;
+  animation-timing-function: var(--mb-cube-1);
 }
 
 
@@ -101,15 +101,15 @@
   -webkit-animation-name: slideInUp2;
   animation-name: slideInUp2;
   animation-duration: 1000ms;
-  animation-timing-function: var(--ag-cube-1);
+  animation-timing-function: var(--mb-cube-1);
 }
 
 @keyframes slideInDown2 {
   0% {
     opacity: 0;
-    -webkit-transform: translateY(100%);
-    -ms-transform: translateY(100%);
-    transform: translateY(100%);
+    -webkit-transform: translateY(-100%);
+    -ms-transform: translateY(-100%);
+    transform: translateY(-100%);
   }
 
   100% {
@@ -123,7 +123,7 @@
   -webkit-animation-name: slideInDown2;
   animation-name: slideInDown2;
   animation-duration: 1000ms;
-  animation-timing-function: var(--ag-cube-1);
+  animation-timing-function: var(--mb-cube-1);
 }
 
 

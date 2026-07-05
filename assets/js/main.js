@@ -16,17 +16,16 @@
 
 window.addEventListener('load', function(){
 
+	if (document.querySelectorAll(".mb-preloader-1").length) {
+		const loader = document.querySelector(".mb-preloader-1");
 
-	if (document.querySelectorAll(".el-preloader-1").length) {
-		const loader = document.querySelector(".el-preloader-1");
-		
 		setTimeout(() => {
 			loader.classList.add("loaded");
 			afterPreloader();
 		});
 		setTimeout(function () {
 			loader.remove();
-		}, 1500);
+		}, 700);
 
 	} else {
 		afterPreloader();
@@ -35,7 +34,6 @@ window.addEventListener('load', function(){
 	afterPageLoad();
 
 })
-
 
 
 
@@ -151,7 +149,7 @@ function afterPreloader() {
 					gsap.to(split_type_set, {
 						scrollTrigger: {
 							trigger: wa_el,
-							toggleActions: "play reverse play reverse",
+							toggleActions: "play none none reverse",
 							start: "top 86%",
 						},
 						rotateX: 0,
@@ -159,6 +157,7 @@ function afterPreloader() {
 						opacity: 1,
 						stagger: 0.03,
 						delay: atDelay,
+						ease: "ease1",
 					});
 		
 				}
@@ -175,6 +174,91 @@ function afterPreloader() {
 			});
 		}
 		wa_split_text();
+
+		// title-animation-2
+		document.querySelectorAll(".wa_split_2").forEach((atEl) => {
+			const atSplit = new SplitText(atEl, {
+				type: "words,chars",
+				wordsClass: "word",
+				charsClass: "char"
+			});
+
+			let atDuration = parseFloat(atEl.getAttribute("data-speed")) || 1;
+			let atDelay = parseFloat(atEl.getAttribute("data-delay")) || 0;
+
+			if (window.innerWidth <= 768) {
+				atDuration = atDuration * 0.3; 
+			}
+
+			gsap.set(atSplit.words, {
+				willChange: "transform",
+				perspective: 1000,
+				transformStyle: "preserve-3d"
+			});
+
+			gsap.set(atSplit.chars, {
+				willChange: "transform",
+				opacity: 0,
+				rotateX: -80,
+				transformOrigin: "center center -10px"
+			});
+
+			gsap.set(atEl, {
+				perspective: 1000,
+				transformStyle: "preserve-3d"
+			});
+
+			gsap.to(atSplit.chars, {
+				scrollTrigger: {
+					trigger: atEl,
+					start: "top 86%",
+				},
+				opacity: 1,
+				rotateX: 0,
+				duration: atDuration,
+				delay: atDelay,
+				ease: "ease1",
+				stagger: {
+					each: 0.05,
+					from: "center",
+					grid: "auto",
+				},
+			});
+		});
+
+		// button-text
+		if ($(".wa_btn_split").length) {
+			gsap.registerPlugin(SplitText);
+
+			$(".wa_btn_split").each(function (index, el) {
+
+				el.split = new SplitText(el, {
+					type: "words"
+				});
+
+				$(el).on("mouseenter", function () {
+
+					gsap.fromTo(
+						el.split.words,
+						{
+							opacity: 0,
+							scale: (i) => (i % 2 === 0 ? 0 : 2),
+							force3D: true,
+						},
+						{
+							opacity: 1,
+							scale: 1,
+							duration: 0.5,
+							stagger: 0.03,
+							ease: "ease1",
+							overwrite: "auto",
+						}
+					);
+
+				});
+
+			});
+		}
 	}	
 
 

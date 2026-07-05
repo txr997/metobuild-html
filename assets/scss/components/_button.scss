@@ -42,6 +42,7 @@
     display: inline-flex;
     align-items: center;
     gap: 16px;
+    transition: .3s;
 
     .icon {
         display: inline-flex;
@@ -69,8 +70,10 @@
     }
 
     &:hover {
-        color: #fff;
+        color: #000;
+        background-color: var(--mb-clr-sd-1);
         .icon {
+            color: #fff;
             i {
                 &:nth-child(1) {
                     transform: translateX(30px);
@@ -113,7 +116,8 @@
     }
 
     &:hover {
-        color: #fff;
+ 
+        color: var(--mb-clr-sd-1);
     }
 }
 

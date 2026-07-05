@@ -96,6 +96,10 @@
             color: #fff;
             margin-bottom: 13px;
             transition: var(--mb-cube-1);
+
+            &:hover {
+                transform: translateY(3px);
+            }
         }
 
         .disc {
@@ -152,6 +156,11 @@
 
             .icon {
                 background-color: var(--mb-clr-pr-1);
+            }
+
+            &:hover {
+                background-color: var(--mb-clr-sd-1);
+                color: #000;
             }
         }
     }

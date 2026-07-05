@@ -120,13 +120,31 @@
                 height: auto;
                 background: transparent;
             }
+
+
+            &:hover {
+                background: var(--mb-clr-sd-1);
+                .icon {
+                    color: #000;
+                }
+            }
         }
+
+
 
 
         &:nth-child(2) {
             .mb-pr-btn-1 {
                 background: var(--mb-clr-pr-1);
                 color: #fff;
+
+                &:hover {
+                    background: var(--mb-clr-sd-1);
+                    color: #000;
+                    .icon {
+                        color: #000;
+                    }
+                }
             }
         }
         
