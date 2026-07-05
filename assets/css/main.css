@@ -2710,6 +2710,7 @@ input:focus::placeholder, textarea:focus::placeholder {
 }
 .mb-about-1-wrap-middle .middle-disc {
   margin-bottom: 55px;
+  max-width: 450px;
 }
 .mb-about-1-wrap-right {
   position: relative;
@@ -3200,6 +3201,7 @@ input:focus::placeholder, textarea:focus::placeholder {
   font-size: 28px;
   opacity: 40%;
   margin-bottom: 18px;
+  font-weight: 400;
 }
 .mb-price-1-card .price-features {
   display: flex;
@@ -3337,7 +3339,6 @@ input:focus::placeholder, textarea:focus::placeholder {
   text-transform: uppercase;
   flex: 0 0 auto;
   border-radius: 6px;
-  color: #000;
   font-weight: 500;
   font-size: 20px;
   padding: 25px 32px;
@@ -3503,7 +3504,7 @@ input:focus::placeholder, textarea:focus::placeholder {
   top: 0;
   right: 0;
   z-index: -1;
-  width: 59%;
+  width: 58%;
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
   .mb-choose-1-shape-img {
@@ -3530,7 +3531,7 @@ input:focus::placeholder, textarea:focus::placeholder {
 .mb-choose-1-shape-img-2 {
   position: absolute;
   bottom: 0;
-  left: 2%;
+  left: 1.6%;
   z-index: -3;
   width: 61%;
 }

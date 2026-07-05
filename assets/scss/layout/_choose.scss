@@ -179,7 +179,7 @@
         top: 0;
         right: 0;
         z-index: -1;
-        width: 59%;
+        width: 58%;
 
         @media #{$lg,$md,$xs} {
             display: none;
@@ -207,7 +207,7 @@
     &-shape-img-2 {
         position: absolute;
         bottom: 0;
-        left: 2%;
+        left: 1.6%;
         z-index: -3;
         width: 61%;
         @media #{$lg,$md,$xs} {
