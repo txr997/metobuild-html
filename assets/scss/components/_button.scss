@@ -29,6 +29,24 @@
         color: #000;
     }
 }
+
+
+.mb-menu-btn-2 {
+    display: inline-flex;
+    width: 48px;
+    height: 48px;
+    border-radius: 4px;
+    background: #EFE6D8;
+    align-items: center;
+    justify-content: center;
+    transition: .2s;
+
+    &:hover {
+        background-color: var(--mb-clr-pr-1);
+    }
+}
+
+
 .mb-pr-btn-1 {
     font-family: var(--mb-font-1);
     color: #fff;
