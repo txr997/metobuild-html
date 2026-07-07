@@ -21,6 +21,8 @@ gsap.config({
 	nullTargetWarn: false,
 });
 
+
+
 // sticky-header-function
 function waStickyHeader() {
     var $window = $(window);

@@ -39,6 +39,33 @@
 }
 
 
+.mb-subtitle-2 {
+    font-family: var(--mb-font-1);
+    font-weight: 400;
+    font-size: 15px;
+    color: #000;
+    line-height: 1;
+    display: inline-flex;
+    align-items: center;
+    padding: 4px;
+    padding-right: 14px;
+    border: 1px solid rgb(0 0 0 / 32%);
+    border-radius: 100px;
+    gap: 6px;
+    margin-bottom: 31px;
+
+    .icon {
+        width: 24px;
+        height: 24px;
+        background: var(--mb-clr-pr-1);
+        flex: 0 0 auto;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+    }
+}
+
 .mb-sec-title-1 {
     font-family: var(--mb-font-2);
     text-transform: uppercase;

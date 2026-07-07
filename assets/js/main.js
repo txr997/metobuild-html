@@ -267,8 +267,8 @@ function afterPreloader() {
 	
     
     // hero-1-slider
-    if ($('.mb_hero2_slider').length) {
-        var mb_hero2_slider = new Swiper(".mb_hero2_slider", {
+    if ($('.mb_hero1_slider').length) {
+        var mb_hero1_slider = new Swiper(".mb_hero1_slider", {
             loop: true,
             speed: 500,
             spaceBetween: 0,
@@ -283,8 +283,8 @@ function afterPreloader() {
             },
 
 			navigation: {
-				nextEl: ".mb_hero2_slider_next",
-				prevEl: ".mb_hero2_slider_prev",
+				nextEl: ".mb_hero1_slider_next",
+				prevEl: ".mb_hero1_slider_prev",
 			},
 
             on: {
@@ -322,6 +322,43 @@ function afterPreloader() {
         
         h1_split_text();
     }
+
+	// hero-2-slider
+	if ($('.mb_hero2_slider').length) {
+		var mb_hero2_slider = new Swiper(".mb_hero2_slider", {
+			loop: true,
+			speed: 500,
+			spaceBetween: 0,
+
+			// autoplay: {
+			// 	delay: 5000,
+			// },
+
+			grabCursor: true,
+			effect: 'creative',
+			creativeEffect: {
+				prev: {
+					shadow: true,
+					origin: 'left center',
+					translate: ['-5%', 0, -200],
+					rotate: [0, 100, 0],
+				},
+				next: {
+					origin: 'right center',
+					translate: ['5%', 0, -200],
+					rotate: [0, -100, 0],
+				},
+			},
+			
+			navigation: {
+				nextEl: ".mb_hero2_slider_next",
+				prevEl: ".mb_hero2_slider_prev",
+			},
+
+
+		});
+
+	}
 /* 
 	after-preloader-end
 */
@@ -424,6 +461,29 @@ var mb_testimonial1_slider = new Swiper(".mb_testimonial1_slider", {
 	},
 });
 
+// hero-2-scroll-animation
+if (window.matchMedia("(min-width: 1200px)").matches) { 
+	const mbH2tl = gsap.timeline({
+		scrollTrigger: {
+		  trigger: ".mb-hero-2-bottom-inner", 
+		  start: "top 80%", 
+		  toggleActions: "play none none none", 
+		  markers: false 
+		}
+	});
+
+	mbH2tl.from(".mb-hero-2-bottom-inner .line-elm, .mb-hero-2-bottom-inner .line-elm-2, .mb-hero-2-bottom-inner .line-elm-3", { 
+		scaleX: 0,
+		duration: 1
+	})
+
+	mbH2tl.from(".mb-hero-2-bottom-inner .logo-x-card, .mb-hero-2-slider-btn", { 
+		x: 100,
+		duration: .5,
+		autoAlpha: 0,
+	}, "<50%")
+
+}
 
 
 
