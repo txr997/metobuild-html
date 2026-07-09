@@ -229,3 +229,225 @@
 /* 
     projects-1-end
 */
+/* 
+    projects-2-start
+*/
+.mb-projects-2 {
+    &-area {
+
+    }
+    &-wrap {
+        display: grid;
+        grid-template-columns: 1.03fr 1fr;
+        height: 100vh;
+        position: relative;
+        z-index: 1;
+
+        @media #{$lg,$md,$xs} {
+            grid-template-columns: 1fr;
+            height: auto;
+        }
+    }
+
+    &-item {
+        &-img {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            height: 100%;
+            @media #{$lg,$md,$xs} {
+                display: none;
+            }
+
+            &-single {
+                position: absolute;
+                inset: 0;
+                opacity: 0;
+                visibility: hidden;
+                transition: opacity .6s ease, visibility .6s ease;
+
+                &.active {
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+        }
+
+        &-content {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            height: 100%;
+
+            @media #{$lg,$md,$xs} {
+                padding: 100px 0;
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                inset: 0;
+                background: rgba(0, 0, 0, 0.52);
+                backdrop-filter: blur(47px);
+            }
+
+            &-single {
+                position: absolute;
+                inset: 0;
+                z-index: 1;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                padding: 20px 150px;
+                transform: translateY(100%);
+                opacity: 0;
+                visibility: hidden;
+                transition: transform .6s ease, opacity .6s ease, visibility .6s ease;
+
+                @media #{$lg,$md,$xs} {
+                    position: relative;
+                    opacity: 1;
+                    transform: unset;
+                    visibility: visible;
+                    padding: 60px 20px;
+                }
+
+                &.prev {
+                    transform: translateY(-100%);
+                }
+
+                &.active {
+                    transform: translateY(0%);
+                    opacity: 1;
+                    visibility: visible;
+                }
+
+                .mb-sec-title-1 {
+                    color: #fff;
+                    margin-bottom: 15px;
+                }
+                
+                .disc {
+                    color: #fff;
+                    max-width: 570px;
+                    margin-bottom: 35px;
+                    opacity: 80%;
+                }
+
+                .mb-pr-btn-1 {
+                    background: #000;
+                    border: 1px solid var(--mb-clr-sd-1);
+
+                    .icon {
+                        background-color: var(--mb-clr-sd-1);
+                        color: #000;
+                    }
+
+                    &:hover {
+                        color: #fff;
+                    }
+                }
+            }
+        }
+
+
+        &-number {
+            position: absolute;
+            top: 0;
+            left: 50.7%;
+            transform: translateX(-50%);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            z-index: 1;
+            justify-content: center;
+            align-items: center;
+
+            @media #{$lg,$md,$xs} {
+                display: none;
+            }
+
+            &-single {
+                width: 80px;
+                height: 80px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+                background: rgba(0, 0, 0, 0.48);
+                border: 1px solid rgba(255, 255, 255, 0.4);
+                backdrop-filter: blur(17px);
+                color: #fff;
+                font-size: 30px;
+                font-weight: 400;
+                position: relative;
+                z-index: 1;
+                transition: background-color .4s ease, color .4s ease;
+
+                .item-line {
+                    width: 2px;
+                    height: 42px;
+                    position: absolute;
+                    left: 39px;
+                    top: 100%;
+                    background-color: rgba(255, 255, 255, 0.24);
+                    overflow: hidden;
+
+                    span {
+                        position: absolute;
+                        inset: 0;
+                        width: 100%;
+                        height: 0%;
+                        background-color: var(--mb-clr-sd-1);
+                    }
+                }
+
+                &.active {
+                    background-color: var(--mb-clr-sd-1);
+                    color: #000;
+                }
+
+                &:last-child {
+                    .item-line {
+                        display: none;
+                    }
+                }
+            }
+        }
+        
+    }
+
+    &-bg-shape {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+        width: 20%;
+
+        @media #{$lg,$md,$xs} {
+            display: none;
+        }
+    }
+}
+
+
+.mb-projects-2 {
+    &-height {
+        @media #{$over,$xxxl,$xxl,$xl} {
+            position: relative;
+            z-index: 1;
+            height: 500vh; // fallback, set dynamically in JS from item count
+        }
+    }
+    &-pin {
+        @media #{$over,$xxxl,$xxl,$xl} {
+            position: sticky;
+            top: 0;
+        }
+    }
+}
+
+/* 
+    projects-2-end
+*/

@@ -485,6 +485,109 @@ if (window.matchMedia("(min-width: 1200px)").matches) {
 
 }
 
+// about-2-author-slider
+if ($('.mb_a2_author_slider').length > 0 ) {
+	var mb_a2_author_slider = new Swiper('.mb_a2_author_slider', {
+		spaceBetween: 0,
+		slidesPerView: 3,
+		loop: true,
+		// autoplay: {
+		// 	enabled: true,
+		// 	delay: 1000
+		// },
+		speed: 1000,
+	});
+};
+
+// projects-2-scroll-stack
+if (window.matchMedia("(min-width: 1200px)").matches) { 
+	if ($('.mb-projects-2-height').length) {
+		const mbP2Wrap = document.querySelector('.mb-projects-2-height');
+		const mbP2Imgs = gsap.utils.toArray('.mb-projects-2-item-img-single', mbP2Wrap);
+		const mbP2Numbers = gsap.utils.toArray('.mb-projects-2-item-number-single', mbP2Wrap);
+		const mbP2Contents = gsap.utils.toArray('.mb-projects-2-item-content-single', mbP2Wrap);
+		const mbP2Total = mbP2Imgs.length;
+
+		mbP2Wrap.style.height = (mbP2Total * 100) + 'vh';
+
+		function mbP2SetActive(index, fill) {
+			mbP2Imgs.forEach((el, i) => el.classList.toggle('active', i === index));
+			mbP2Contents.forEach((el, i) => {
+				el.classList.toggle('active', i === index);
+				el.classList.toggle('prev', i < index);
+			});
+			mbP2Numbers.forEach((el, i) => {
+				el.classList.toggle('active', i === index);
+
+				const line = el.querySelector('.item-line span');
+				if (!line) return;
+
+				if (i < index) {
+					line.style.height = '100%';
+				} else if (i === index) {
+					line.style.height = (fill * 100) + '%';
+				} else {
+					line.style.height = '0%';
+				}
+			});
+		}
+
+		mbP2SetActive(0, 0);
+
+		ScrollTrigger.create({
+			trigger: mbP2Wrap,
+			start: 'top top',
+			end: 'bottom bottom',
+			scrub: true,
+			onUpdate: (self) => {
+				const progress = self.progress * mbP2Total;
+				const index = Math.min(mbP2Total - 1, Math.floor(progress));
+				const fill = progress - index;
+				mbP2SetActive(index, fill);
+			},
+		});
+	}
+}
+
+// step-2-scroll-stack
+if (window.matchMedia("(min-width: 1200px)").matches) { 
+	if ($('.mb-step-2-card').length) {
+		const mbS2Cards = gsap.utils.toArray('.mb-step-2-card');
+	
+		mbS2Cards.forEach((card, i) => {
+			if (i === mbS2Cards.length - 1) return;
+	
+			gsap.to(card, {
+				scale: .5,
+				opacity: 0,
+				ease: 'none',
+				scrollTrigger: {
+					trigger: mbS2Cards[i + 1],
+					start: 'top bottom',
+					end: 'top top',
+					scrub: true,
+				}
+			});
+		});
+	}
+	
+	// step-2-scroll-progress-line
+	if ($('.mb-step-2-scroll-progress-line').length) {
+		gsap.to('.mb-step-2-scroll-progress-line', {
+			width: '100%',
+			ease: 'none',
+			scrollTrigger: {
+				trigger: '.mb-step-2-area',
+				start: 'top top',
+				end: 'bottom bottom',
+				scrub: true,
+			}
+		});
+	}
+
+}
+
+
 
 
 

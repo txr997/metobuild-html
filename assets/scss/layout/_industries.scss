@@ -93,3 +93,66 @@
 /* 
     industries-1-end
 */
+
+/* 
+    industries-2-start
+*/
+.mb-industries-2 {
+    &-area {
+
+        &::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 250px;
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
+            left: 0;
+            bottom: 0;
+            z-index: -1;
+        }
+
+    }
+
+    &-sec-title {
+        max-width: 630px;
+        margin-left: auto;
+        text-align: right;
+        margin-bottom: 320px;
+
+        @media #{$xs} {
+            margin-bottom: 120px;
+        }
+
+        .mb-subtitle-2 {
+            border-color: rgb(255 255 255 / 32%);
+            color: #fff;
+        }
+
+        .mb-sec-title-1 {
+            color: #FFF;
+        }
+    }
+
+
+    &-bottom {
+        border-top: 1px solid rgb(255 255 255 / 28%);
+        padding: 40px 0;
+
+        &-flex {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            justify-content: space-between;
+            flex-wrap: wrap;
+
+            .disc {
+                color: #fff;
+                max-width: 550px;
+            }
+        }
+    }
+}
+
+/* 
+    industries-2-end
+*/

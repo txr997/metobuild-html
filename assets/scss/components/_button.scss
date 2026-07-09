@@ -102,6 +102,15 @@
             }
         }
     }
+
+    &:is(.has-v2) {
+        background-color: var(--mb-clr-sd-1);
+        color: #000;
+
+        .icon {
+            color: var(--mb-clr-sd-1);
+        }
+    }
 }
 
 

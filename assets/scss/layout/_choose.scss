@@ -229,3 +229,199 @@
 /* 
     choose-1-end
 */
+
+/* 
+    choose-2-start
+*/
+.mb-choose-2 {
+    &-area {
+        background-color: #FBF9F9;
+    }
+    &-sec-title {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+
+        @media #{$xs} {
+            position: unset;
+        }
+
+        .mb-subtitle-2 {
+            margin-bottom: 22px;
+        }
+
+        .mb-sec-title-1 {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            align-items: self-start;
+            margin-bottom: 30px;
+
+            span {
+                opacity: 1;
+                background-color: #fff;
+                padding: 12px 15px;
+                padding-bottom: 0;
+                display: inline-block;
+                border-radius: 8px;
+
+
+
+            }
+
+        }
+    }
+
+    &-wrap {
+        display: grid;
+        gap: 30px;
+        grid-template-columns: 2.35fr 1fr;
+
+        @media #{$md,$xs} {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &-card {
+        text-align: left;
+        background: transparent;
+        border-radius: 12px;
+        padding: 36px;
+        transition: var(--mb-cube-1);
+
+        @media #{$lg,$md,$xs} {
+            padding: 36px 20px;
+        }
+
+        .icon {
+            width: 64px;
+            height: 64px;
+            background: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 30px;
+            position: relative;
+            z-index: 1;
+            transition: var(--mb-cube-1);
+
+            img {
+                transition: var(--mb-cube-1);
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                width: 23px;
+                height: 23px;
+                background: #FFFFFF;
+                opacity: 0.7;
+                filter: blur(11px);
+                border-radius: 8px;
+                top: -5px;
+                right: -5px;
+                transition: var(--mb-cube-1);
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                width: 23px;
+                height: 23px;
+                background: #FFFFFF;
+                opacity: 0.7;
+                filter: blur(11px);
+                border-radius: 8px;
+                bottom: -5px;
+                left: -5px;
+                transition: var(--mb-cube-1);
+            }
+        }
+
+        .title {
+            color: #000;
+            font-size: 24px;
+            margin-bottom: 14px;
+            transition: var(--mb-cube-1);
+        }
+
+        .disc {
+            transition: var(--mb-cube-1);
+        }
+    }
+
+    &-tabs {
+        &-btn {
+            .nav-link {
+                background-color: transparent;
+
+                &:is(.active) {
+                    .mb-choose-2-card {
+                        background-color: #000;
+                        .icon {
+                            background-color: var(--mb-clr-sd-1);
+
+                            img {
+                                filter: brightness(0);
+                            }
+
+                            &::after {
+                                background-color: #000;
+                            }
+
+                            &::before {
+                                background-color: #000;
+                            }
+                        }
+                        .title {
+                            color: #fff;
+                        }
+                        .disc {
+                            color: #fff;
+                            opacity: 80%;
+                        }
+                    }
+                }
+            }
+        }
+
+
+    }
+
+    &-img {
+        max-width: 830px;
+        margin-left: auto;
+        display: grid;
+        gap: 28px;
+        grid-template-columns: 1fr 2.07fr;
+        align-items: end;
+
+        @media #{$xs} {
+            grid-template-columns: 1fr ;
+        }
+
+        &-1 {
+            border-radius: 16px;
+            height: 340px;
+        }
+
+        &-2 {
+            height: 744px;
+            border-radius: 16px;
+
+            @media #{$xs} {
+                height: 400px;
+            }
+        }
+        
+    }
+    
+    
+}
+
+/* 
+    choose-2-end
+*/
