@@ -388,7 +388,19 @@
             }
         }
 
-
+        &-pane {
+            .tab-pane {
+                &:is(.active) {
+                    .mb-choose-2-img-1 {
+                        animation: zoomIn .5s backwards;
+                    }
+                    .mb-choose-2-img-2 {
+                        animation: zoomIn .5s backwards;
+                        animation-delay: .3s;
+                    }
+                }
+            }
+        }
     }
 
     &-img {
@@ -406,11 +418,13 @@
         &-1 {
             border-radius: 16px;
             height: 340px;
+            transform-origin: left bottom;
         }
 
         &-2 {
             height: 744px;
             border-radius: 16px;
+            transform-origin: left bottom;
 
             @media #{$xs} {
                 height: 400px;
