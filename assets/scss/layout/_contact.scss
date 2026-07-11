@@ -171,6 +171,9 @@
         }
 
         .mb-sec-title-1 {
+            @media #{$over,$xxxl} {
+                font-size: 80px;
+            }
             @media #{$lg,$md,$xs} {
                 color: #fff;
             }
@@ -192,7 +195,7 @@
         padding: 18px;
         grid-template-columns: 1.16fr 1fr;
         align-items: end;
-        margin-top: -123px;
+        margin-top: -140px;
         position: relative;
         z-index: 1;
         overflow: hidden;
@@ -259,7 +262,7 @@
     &-info {
         display: flex;
         flex-direction: column;
-        gap: 30px;
+        gap: 24px;
 
         .title {
             font-size: 14px;

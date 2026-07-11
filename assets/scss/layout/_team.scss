@@ -69,7 +69,7 @@
             overflow: hidden;
             position: relative;
             z-index: 1;
-
+            height: 475px;
         }
         .img-bg {
             position: absolute;
@@ -82,6 +82,12 @@
         }
         .img-man {
             text-align: center;
+            @media #{$xl,$lg,$md,$xs} {
+                height: 100%;
+                display: flex;
+                align-items: end;
+                justify-content: center;
+            }
         }
 
         .content-wrap {

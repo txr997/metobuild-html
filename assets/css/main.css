@@ -2879,12 +2879,30 @@ input:focus::placeholder, textarea:focus::placeholder {
   width: 68px;
   height: 68px;
   transition: var(--mb-cube-1);
+  overflow: hidden;
+}
+.mb-hero-2-btn .icon img {
+  transition: var(--mb-cube-1);
+}
+.mb-hero-2-btn .icon img:nth-child(2) {
+  position: relative;
+  z-index: 1;
+}
+.mb-hero-2-btn .icon img:nth-child(1) {
+  position: absolute;
+  transform: translate(-40px, 40px);
 }
 .mb-hero-2-btn .circle-text {
   animation: wa-rotated 10s linear infinite;
 }
 .mb-hero-2-btn:hover .icon {
   background-color: var(--mb-clr-pr-1);
+}
+.mb-hero-2-btn:hover .icon img:nth-child(1) {
+  transform: translate(0px, 0px);
+}
+.mb-hero-2-btn:hover .icon img:nth-child(2) {
+  transform: translate(40px, -40px);
 }
 .mb-hero-2-bottom {
   mask-size: 100% 100%;
@@ -5597,6 +5615,11 @@ input:focus::placeholder, textarea:focus::placeholder {
   color: #fff;
   border-color: #fff;
 }
+@media (min-width: 1800px), only screen and (min-width: 1600px) and (max-width: 1799px) {
+  .mb-contact-2-sec-title .mb-sec-title-1 {
+    font-size: 80px;
+  }
+}
 @media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
   .mb-contact-2-sec-title .mb-sec-title-1 {
     color: #fff;
@@ -5615,7 +5638,7 @@ input:focus::placeholder, textarea:focus::placeholder {
   padding: 18px;
   grid-template-columns: 1.16fr 1fr;
   align-items: end;
-  margin-top: -123px;
+  margin-top: -140px;
   position: relative;
   z-index: 1;
   overflow: hidden;
@@ -5674,7 +5697,7 @@ input:focus::placeholder, textarea:focus::placeholder {
 .mb-contact-2-info {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 24px;
 }
 .mb-contact-2-info .title {
   font-size: 14px;
@@ -5870,6 +5893,7 @@ input:focus::placeholder, textarea:focus::placeholder {
   overflow: hidden;
   position: relative;
   z-index: 1;
+  height: 475px;
 }
 .mb-team-2-member .img-bg {
   position: absolute;
@@ -5882,6 +5906,14 @@ input:focus::placeholder, textarea:focus::placeholder {
 }
 .mb-team-2-member .img-man {
   text-align: center;
+}
+@media only screen and (min-width: 1200px) and (max-width: 1399px), only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
+  .mb-team-2-member .img-man {
+    height: 100%;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+  }
 }
 .mb-team-2-member .content-wrap {
   padding: 40px 40px;

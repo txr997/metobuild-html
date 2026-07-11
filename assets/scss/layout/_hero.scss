@@ -432,6 +432,21 @@
             width: 68px;
             height: 68px;
             transition: var(--mb-cube-1);
+            overflow: hidden;
+
+
+            img {
+                transition: var(--mb-cube-1);
+
+                &:nth-child(2) {
+                    position: relative;
+                    z-index: 1;
+                }
+                &:nth-child(1) {
+                    position: absolute;
+                    transform: translate(-40px, 40px);
+                }
+            }
         }
 
         .circle-text {
@@ -441,6 +456,15 @@
         &:hover {
             .icon {
                 background-color: var(--mb-clr-pr-1);
+
+                img {
+                    &:nth-child(1) {
+                        transform: translate(0px, 0px);
+                    }
+                    &:nth-child(2) {
+                        transform: translate(40px, -40px);
+                    }
+                }
             }
         }
         

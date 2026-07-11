@@ -330,9 +330,9 @@ function afterPreloader() {
 			speed: 500,
 			spaceBetween: 0,
 
-			// autoplay: {
-			// 	delay: 5000,
-			// },
+			autoplay: {
+				delay: 5000,
+			},
 
 			grabCursor: true,
 			effect: 'creative',
