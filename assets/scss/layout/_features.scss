@@ -140,3 +140,71 @@
 /* 
     features-1-end
 */
+
+/* 
+    features-2-start
+*/
+.mb-features-3 {
+    &-area {
+        border-bottom: 1px solid rgb(0 0 0 / 12%);
+    }
+
+    &-wrap {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+
+        @media #{$md} {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @media #{$xs} {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &-item {
+        padding: 60px 42px;
+
+        @media #{$xl,$lg,$md,$xs} {
+            padding: 60px 20px;
+        }
+
+        &:not(:last-child) {
+            border-right: 1px solid #E0E2E4;
+        }
+
+        .icon-x-title {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            margin-bottom: 24px;
+        }
+
+        .title {
+            font-size: 32px;
+
+            
+            @media #{$lg,$md,$xs} {
+                font-size: 26px;
+            }
+        }
+
+        .icon {
+            flex: 0 0 auto;
+        }
+
+        &:hover {
+            .icon {
+                img {
+                    animation: swing 1s;
+                }
+            }
+        }
+    }
+}
+
+
+
+/* 
+    features-2-end
+*/

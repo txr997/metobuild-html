@@ -261,10 +261,6 @@ function afterPreloader() {
 		}
 	}	
 
-
-
-
-	
     
     // hero-1-slider
     if ($('.mb_hero1_slider').length) {
@@ -359,6 +355,14 @@ function afterPreloader() {
 		});
 
 	}
+
+	const hero3tl = gsap.timeline();
+	hero3tl.from(".mb-hero-3-btn", { 
+		x: -400,
+		autoAlpha: 0,
+		duration: 1
+	})
+
 /* 
 	after-preloader-end
 */
